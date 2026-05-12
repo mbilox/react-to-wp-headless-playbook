@@ -1,0 +1,56 @@
+```mermaid
+sequenceDiagram
+    participant React as React Frontend
+    participant Hook as useHomeData()
+    participant WP as WordPress REST API
+    participant Meta as Meta Campos
+    participant DB as Base de Datos
+    participant Admin as WordPress Admin
+
+    Note over React,Admin: Fase 4: Frontend solicita datos
+    
+    React->>Hook: Llamar useHomeData()
+    Hook->>WP: GET /wp-json/wp/v2/pages?slug=home
+    WP->>Meta: Leer post meta
+    Meta->>DB: SELECT meta_value FROM wp_postmeta
+    DB-->>Meta: Datos crudos
+    Meta-->>WP: Objeto meta con estructura JSON
+    WP-->>Hook: Respuesta JSON con meta
+    Hook-->>React: { data, loading, error }
+
+    Note over React,Admin: React renderiza con datos dinámicos
+
+    React->>React: Componente Hero recibe props
+    React->>React: Fallback a texto estático si campo vacío
+
+    Note over React,Admin: Fase 3: Admin edita contenido
+
+    Admin->>Admin: Abre página con Home Template
+    Admin->>Admin: Edita metabox "Contenido del Home"
+    Admin->>Admin: Selecciona imagen con Media Frame
+    Admin->>Admin: Agrega filas en repeaters
+    Admin->>WP: POST save_post (Update)
+    WP->>Meta: update_post_meta()
+    Meta->>DB: UPDATE wp_postmeta
+    DB-->>Meta: OK
+    Meta-->>WP: OK
+    WP-->>Admin: Página actualizada
+
+    Note over React,Admin: Frontend recarga y ve cambios
+
+    React->>Hook: Re-fetch (o hard reload)
+    Hook->>WP: GET /wp-json/wp/v2/pages?slug=home
+    WP->>Meta: Leer post meta (datos actualizados)
+    Meta->>DB: SELECT meta_value
+    DB-->>Meta: Nuevos datos
+    Meta-->>WP: Objeto meta actualizado
+    WP-->>Hook: Respuesta JSON actualizada
+    Hook-->>React: { data (nuevo), loading: false, error: null }
+
+    Note over React,Admin: Fase 5: Verificación visual
+
+    React->>React: Renderiza con nuevos datos
+    React->>React: GSAP animaciones se ejecutan
+    
+    Note right of React: agent-browser screenshot
+```

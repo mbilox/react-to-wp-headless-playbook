@@ -1,0 +1,96 @@
+```mermaid
+flowchart TD
+    A[Diseño React Estático] --> B{Fase 1: Análisis}
+    B --> C[Identificar Secciones]
+    B --> D[Detectar Texto Estático]
+    B --> E[Mapear Assets]
+    B --> F[Documentar Animaciones]
+    
+    C --> G{Fase 2: OpenSpec Planning}
+    D --> G
+    E --> G
+    F --> G
+    
+    G --> H[Crear Change]
+    H --> I[Generar Proposal]
+    I --> J[Generar Design]
+    J --> K[Generar Specs]
+    K --> L[Generar Tasks]
+    L --> M{Aprobación Usuario}
+    
+    M -->|Ajustes| J
+    M -->|OK| N{Fase 3: WP Backend}
+    
+    N --> O[Localizar WP]
+    N --> P[Crear home-template.php]
+    N --> Q[Asignar Plantilla]
+    N --> R[Crear Mu-Plugin]
+    
+    R --> S[register_post_meta]
+    R --> T[JSON Schema]
+    R --> U[show_in_rest]
+    
+    S --> V{Fase 3b: Metabox Admin}
+    T --> V
+    U --> V
+    
+    V --> W[Campos por Sección]
+    V --> X[WordPress Media Frame]
+    V --> Y[Repeaters Dinámicos]
+    V --> Z[Sanitización save_post]
+    
+    W --> AA[REST API Response]
+    X --> AA
+    Y --> AA
+    Z --> AA
+    P --> AA
+    Q --> AA
+    
+    AA --> AB{Fase 4: React Frontend}
+    
+    AB --> AC[Tipos TypeScript]
+    AB --> AD[Hook useHomeData]
+    AB --> AE[Props + Fallbacks]
+    AB --> AF[Preservar Animaciones]
+    
+    AC --> AG[App.tsx Modificado]
+    AD --> AG
+    AE --> AG
+    AF --> AG
+    
+    AG --> AH{Fase 5: Verificación}
+    
+    AH --> AI[npm run build]
+    AH --> AJ[REST API Validation]
+    AH --> AK[agent-browser Screenshots]
+    AH --> AL[Probar Fallbacks]
+    AH --> AM[Validar Diseño]
+    
+    AI --> AN{Aprobación Final}
+    AJ --> AN
+    AK --> AN
+    AL --> AN
+    AM --> AN
+    
+    AN -->|Fix| AB
+    AN -->|OK| AO{Fase 6: Deploy}
+    
+    AO --> AP[Deploy WordPress]
+    AO --> AQ[Deploy Frontend]
+    AO --> AR[Archive Change]
+    
+    AP --> AS[Proyecto Terminado]
+    AQ --> AS
+    AR --> AS
+    
+    style A fill:#e3f2fd
+    style B fill:#fff3e0
+    style G fill:#f3e5f5
+    style N fill:#e8f5e9
+    style V fill:#e8f5e9
+    style AB fill:#e3f2fd
+    style AH fill:#fff3e0
+    style AN fill:#ffebee
+    style AO fill:#f3e5f5
+    style AS fill:#e8f5e9
+```

@@ -1,0 +1,157 @@
+/* 
+ * Estilos para el Metabox "Contenido del Home"
+ * Prefix: PREFIX-
+ */
+
+.PREFIX-meta-box-wrapper {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.PREFIX-meta-box-wrapper * {
+    box-sizing: border-box;
+}
+
+/* Secciones Principales */
+.PREFIX-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.PREFIX-section-title {
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2271b1; /* Color WP Primary */
+    color: #1d2327;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Campos de Formulario */
+.PREFIX-field {
+    margin-bottom: 15px;
+}
+
+.PREFIX-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #1d2327;
+}
+
+.PREFIX-field input[type="text"],
+.PREFIX-field input[type="number"],
+.PREFIX-field textarea,
+.PREFIX-field select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 3px;
+    box-shadow: 0 0 0 transparent;
+    transition: box-shadow .1s linear;
+}
+
+.PREFIX-field input[type="text"]:focus,
+.PREFIX-field input[type="number"]:focus,
+.PREFIX-field textarea:focus,
+.PREFIX-field select:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: 2px solid transparent;
+}
+
+.PREFIX-field input.small {
+    width: 150px;
+}
+
+/* Filas de campos (grids) */
+.PREFIX-field-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.PREFIX-field-row .PREFIX-field {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Repeaters (Listas dinámicas) */
+.PREFIX-repeater {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 3px;
+}
+
+.PREFIX-repeater h4 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #1d2327;
+}
+
+.PREFIX-repeater-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f0f0f1;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    position: relative;
+    border-left: 4px solid #2271b1;
+}
+
+.PREFIX-repeater-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Botones Custom */
+.PREFIX-remove-item {
+    margin-top: 10px !important;
+    color: #d63638 !important;
+    border-color: #d63638 !important;
+}
+
+.PREFIX-remove-item:hover {
+    background: #d63638 !important;
+    color: #fff !important;
+}
+
+.PREFIX-add-item {
+    margin-top: 15px !important;
+    background: #f6f7f7 !important;
+    color: #2271b1 !important;
+    border-color: #2271b1 !important;
+}
+
+.PREFIX-add-item:hover {
+    background: #f0f0f1 !important;
+    color: #135e96 !important;
+    border-color: #135e96 !important;
+}
+
+/* Media Frame (Preview de imágenes) */
+.PREFIX-image-upload {
+    margin-top: 8px;
+    padding: 10px;
+    background: #fff;
+    border: 1px dashed #c3c4c7;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.PREFIX-image-preview {
+    margin-bottom: 10px;
+    min-height: 10px;
+}
+
+.PREFIX-image-preview img {
+    max-width: 150px;
+    height: auto;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    display: block;
+}
