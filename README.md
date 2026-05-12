@@ -1,9 +1,9 @@
 # React to WordPress Headless — SKILL HÍBRIDO
 
 > **Versión:** 1.0.0  
-> **Autor:** WE Digital / Anomalyco  
+> **Autor:** Bilox  
 > **Fecha:** Mayo 2026  
-> **Proyecto de referencia:** theme-wordpress2 (WE Digital Agency)
+> **Proyecto de referencia:** theme-wordpress (Digital Agency)
 
 ---
 
