@@ -25,7 +25,7 @@
 
 ### ¿Qué resolvemos?
 
-Los sitios React hechos con IA a travez de su webchat, como por ejemplo: Kimi o Claude tienen todo el contenido **hardcodeado** en el código. Esto significa que cualquier cambio de texto, imagen o estadística requiere un desarrollador.
+Los sitios React tienen todo el contenido **hardcodeado** en el código. Esto significa que cualquier cambio de texto, imagen o estadística requiere un desarrollador.
 
 **Solución:** Conectar el frontend React con WordPress como CMS headless, permitiendo que el equipo de marketing/negocio edite todo el contenido desde el admin de WordPress.
 

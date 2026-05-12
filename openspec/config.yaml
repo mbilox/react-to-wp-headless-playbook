@@ -1,0 +1,34 @@
+schema: spec-driven
+name: react-to-wp-headless-playbook
+description: >
+  Proceso híbrido documentado para convertir sitios React estáticos
+  en sitios headless administrados por WordPress. Sin ACF, todo nativo.
+version: "1.0.0"
+author: Bilox
+project_type: documentation
+base_path: .
+
+artifacts:
+  proposal:
+    required: true
+    description: "Qué es este playbook y por qué existe"
+  design:
+    required: true
+    description: "Arquitectura del proceso y decisiones técnicas"
+  specs:
+    required: true
+    description: "Capabilities del proceso (7 fases)"
+  tasks:
+    required: true
+    description: "Tareas ejecutables para implementar y mantener"
+
+apply:
+  requires:
+    - proposal
+    - design
+    - specs
+    - tasks
+
+archive:
+  path: openspec/changes/archive
+  prefix_date: true

@@ -1,0 +1,17 @@
+change_name: playbook-v1.0.0
+schema: spec-driven
+status: active
+created_at: "2026-05-12"
+artifacts:
+  proposal:
+    status: done
+    path: proposal.md
+  design:
+    status: done
+    path: design.md
+  specs:
+    status: done
+    path: specs/
+  tasks:
+    status: done
+    path: tasks.md
